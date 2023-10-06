@@ -1,80 +1,68 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: 100%;
+width: 100vw;
 
 
-> header {
+> header{
     width: 100%;
     height: 144px;
-
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+    background: ${({theme}) => theme.COLORS.BACKGROUND_900};
 
     display: flex;
     align-items: center;
-
-    padding: 0 124px;
-
-    svg {
-        color: ${({ theme }) => theme.COLORS.GRAY_100};
+    padding: 0 50px;
+    
+    svg{
+        color: ${({theme}) => theme.COLORS.GRAY_100};
         font-size: 24px;
 
     }
 }
 
 
-`;
-
-export const Form = styled.form`
-    max-width: 340px;
-    margin: 30px auto 0;
-
-    > div:nth-child(4){
-        margin-top: 24px;
-    }
-
 `
 
-export const Avatar = styled.div `
-    position: relative;
-    margin: -124px auto 32px;
+export const Form = styled.form`
+max-width: 340px;
+margin: -93px auto 0 ;
+>div:nth-child(4){
+    margin-top: 24px;
 
-    width: 186px;
-    height: 186px;
-
-> img {
-    width: 186px;
-    height: 186px;
-    border-radius: 50%;
 }
+`
+export const Avatar = styled.div`
+position: relative;
+width: 186px;
+height: 186px;
+margin: 0 auto 32px;
 
-> label {
+> img{
+border-radius: 50%;
+width: 186px;
+height: 186px;
+}
+>label{
     width: 48px;
     height: 48px;
-
-    background-color: ${({ theme }) => theme.COLORS.ORANGE};
+    background-color: ${({theme}) => theme.COLORS.ORANGE};
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     position: absolute;
     bottom: 7px;
     right: 7px;
-
     cursor: pointer;
 
-    input {
-        display: none;
-
+    input{
+        //display: none;
     }
 
-    svg {
+    svg{
         width: 20px;
         height: 20px;
-        
-        color: ${({ theme }) => theme.COLORS.BACKGROUND_900}; ;
+        color: ${({theme}) => theme.COLORS.BACKGROUND_800};
     }
 
 }
