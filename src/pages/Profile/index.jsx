@@ -1,29 +1,24 @@
 import { useState } from "react";
 import { FiArrowLeft, FiUser, FiMail, FiLock, FiCamera } from "react-icons/fi"
-
 import { useNavigate } from "react-router-dom";
-
-import { useAuth } from '../../hooks/auth'
-
-import { api } from '../../services/api'
-import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
- 
-import { Input } from "../../components/Input"
-import { Button } from "../../components/Button"
-import { ButtonText } from '../../components/ButtonText';
+import { useAuth } from '../../hooks/auth';
+import { api } from '../../services/api';
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
+import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
 
 
 import { Container, Form, Avatar } from "./styles"
 
 export function Profile(){
     const { user, updateProfile } = useAuth();
-    
     const [name, setName] = useState(user.name);
     const [email, setEmail] = useState(user.email);
     const [passwordOld, setPasswordOld] = useState();
     const [passwordNew, setPasswordNew] = useState();
 
-    const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
+    const avatarUrl = user.avatar ?
+     `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
 
     const [ avatar, setAvatar ] = useState(avatarUrl);
     const [ avatarFile, setAvatarFile ] = useState(null);
@@ -120,11 +115,6 @@ export function Profile(){
 
                 <Button title="Salvar" onClick={handleUpdate}/>
             </Form>
-
-
-
-
         </Container>
-
     )
 }

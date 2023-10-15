@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 width: 100vw;
-
+height:100vh;
 
 > header{
     width: 100%;
@@ -45,6 +45,7 @@ border-radius: 50%;
 width: 186px;
 height: 186px;
 }
+
 >label{
     width: 48px;
     height: 48px;
